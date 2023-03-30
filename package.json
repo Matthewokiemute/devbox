@@ -12,7 +12,9 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.9.0",
-    "sass": "^1.59.3"
+    "react-slick": "^0.29.0",
+    "sass": "^1.59.3",
+    "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
     "@types/react": "^18.0.26",
@@ -20,7 +22,7 @@
     "@vitejs/plugin-react": "^3.0.0",
     "eslint": "^8.36.0",
     "eslint-plugin-react": "^7.32.2",
-    "swiper": "^9.1.0",
+    "swiper": "^9.1.1",
     "vite": "^4.0.0"
   }
 }

@@ -1,17 +1,17 @@
 import React from "react";
-import "./Slide.scss";
+import "./ProjectSlide.scss";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { cards } from "../../data.js";
+import { projects } from "../../data.js";
 import { Link } from "react-router-dom";
 
-export default function SimpleSlider() {
+export default function ProjectCard() {
   const settings = {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 5,
+    slidesToShow: 4,
     slidesToScroll: 1,
     centerPadding: 20,
     className: "center",
@@ -20,17 +20,20 @@ export default function SimpleSlider() {
     arrowsScroll: 4
   };
   return (
-    <div className="slide">
+    <div className="projectSlide">
       <div className="container">
         <Slider {...settings}>
-          {cards.map((cards) => {
+          {projects.map((project) => {
             return (
-              <div key={cards.id} className="cards">
-                <Link to="/gigs?cat=design" className="link">
-                  <img src={cards.img} alt={cards.desc} />
-                  <div className="details">
-                    <span>{cards.desc}</span>
-                    <span>{cards.title}</span>
+              <div key={project.id} className="cards">
+                <Link to="/" className="link">
+                  <img src={project.img} alt={project.desc} />
+                  <div className="info">
+                    <img src={project.pp} alt="" />
+                    <div className="texts">
+                      <h4>{project.cat}</h4>
+                      <span>{project.username}</span>
+                    </div>
                   </div>
                 </Link>
               </div>
